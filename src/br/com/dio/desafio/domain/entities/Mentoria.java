@@ -1,13 +1,15 @@
-package br.com.dio.desafio.dominio;
+package br.com.dio.desafio.domain.entities;
+
+import br.com.dio.desafio.infra.services.CourseDefault;
 
 import java.time.LocalDate;
 
-public class Mentoria extends Conteudo{
+public class Mentoria extends Conteudo implements CourseDefault {
 
     private LocalDate data;
 
     @Override
-    public double calcularXp() {
+    public double calcXp() {
         return XP_PADRAO + 20d;
     }
 

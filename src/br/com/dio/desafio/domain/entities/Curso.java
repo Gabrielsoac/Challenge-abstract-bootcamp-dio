@@ -1,11 +1,13 @@
-package br.com.dio.desafio.dominio;
+package br.com.dio.desafio.domain.entities;
 
-public class Curso extends Conteudo{
+import br.com.dio.desafio.infra.services.CourseDefault;
+
+public class Curso extends Conteudo implements CourseDefault {
 
     private int cargaHoraria;
 
     @Override
-    public double calcularXp() {
+    public double calcXp() {
         return XP_PADRAO * cargaHoraria;
     }
 

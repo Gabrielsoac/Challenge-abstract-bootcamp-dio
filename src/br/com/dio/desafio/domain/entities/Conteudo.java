@@ -1,13 +1,17 @@
-package br.com.dio.desafio.dominio;
+package br.com.dio.desafio.domain.entities;
 
-public abstract class Conteudo {
+import br.com.dio.desafio.infra.services.CourseDefault;
+
+public abstract class Conteudo implements CourseDefault {
 
     protected static final double XP_PADRAO = 10d;
 
     private String titulo;
     private String descricao;
 
-    public abstract double calcularXp();
+    public Double calcularXp() {
+        return null;
+    }
 
     public String getTitulo() {
         return titulo;
